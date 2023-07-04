@@ -1,8 +1,8 @@
-import { Button } from "./Button";
+import { Button } from "./Button.interface";
 import { Dialog } from "./Dialog";
 import { HTMLButton } from "./HTMLButton";
 
-export class WebDialog extends Dialog {
+export class WebDialogFactory extends Dialog {
   createButton(): Button {
     return new HTMLButton();
   }

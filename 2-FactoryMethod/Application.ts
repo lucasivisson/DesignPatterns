@@ -1,6 +1,6 @@
 import { Dialog } from "./Dialog";
-import { WebDialog } from "./WebDialog";
-import { WindowsDialog } from "./WindowsDialog";
+import { WebDialogFactory } from "./WebDialogFactory";
+import { WindowsDialogFactory } from "./WindowsDialogFactory";
 
 export class Application {
   dialog: Dialog;
@@ -9,9 +9,9 @@ export class Application {
 
   initialize(OStype: string) {
     if (OStype === "Windows") {
-      this.dialog = new WindowsDialog();
+      this.dialog = new WindowsDialogFactory();
     } else if (OStype === "Web") {
-      this.dialog = new WebDialog();
+      this.dialog = new WebDialogFactory();
     } else {
       throw new Error("Error! Unknown operating system.");
     }

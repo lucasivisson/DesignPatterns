@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import { Button } from "./Button.interface";
 
 export abstract class Dialog {
   abstract createButton(): Button;
