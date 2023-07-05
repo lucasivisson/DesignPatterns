@@ -1,4 +1,4 @@
-import { Button } from "./Button.interface";
+import { Button } from "./button.interface";
 
 export class HTMLButton implements Button {
   render() {

@@ -1,6 +1,6 @@
-import { Button } from "./Button.interface";
+import { Button } from "../Button/button.interface";
 
-export abstract class Dialog {
+export abstract class DialogFactory {
   abstract createButton(): Button;
 
   render() {

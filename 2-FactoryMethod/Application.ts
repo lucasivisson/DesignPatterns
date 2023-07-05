@@ -1,17 +1,17 @@
-import { Dialog } from "./Dialog";
-import { WebDialogFactory } from "./WebDialogFactory";
-import { WindowsDialogFactory } from "./WindowsDialogFactory";
+import { DialogFactory } from "./Factories/DialogFactory";
+import { WebDialogFactory } from "./Factories/WebDialogFactory";
+import { WindowsDialogFactory } from "./Factories/WindowsDialogFactory";
 
 export class Application {
-  dialog: Dialog;
+  dialogFactory: DialogFactory;
 
   constructor() {}
 
   initialize(OStype: string) {
     if (OStype === "Windows") {
-      this.dialog = new WindowsDialogFactory();
+      this.dialogFactory = new WindowsDialogFactory();
     } else if (OStype === "Web") {
-      this.dialog = new WebDialogFactory();
+      this.dialogFactory = new WebDialogFactory();
     } else {
       throw new Error("Error! Unknown operating system.");
     }
@@ -19,6 +19,6 @@ export class Application {
 
   main(OStype: string) {
     this.initialize(OStype);
-    this.dialog.render();
+    this.dialogFactory.render();
   }
 }
