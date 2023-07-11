@@ -1,5 +1,7 @@
-import { CostumerProtocol } from "./costumerProtocol.interface";
+import { Costumer } from "./costumer.interface";
 
-export class IndividualCostumer implements CostumerProtocol {
-  constructor(public name: string) {}
+export class IndividualCostumer implements Costumer {
+  constructor(public name: string) {
+    this.name += " (CLIENTE INDIVIDUAL)";
+  }
 }

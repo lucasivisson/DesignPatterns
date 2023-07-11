@@ -1,5 +1,7 @@
-import { CostumerProtocol } from "./costumerProtocol.interface";
+import { Costumer } from "./costumer.interface";
 
-export class EnterpriseCostumer implements CostumerProtocol {
-  constructor(public name: string) {}
+export class EnterpriseCostumer implements Costumer {
+  constructor(public name: string) {
+    this.name += " (CLIENTE EMPRESARIAL)";
+  }
 }

@@ -1,13 +1,12 @@
-import { VehicleProtocol } from "./vehicleProtocol.interface";
-import { CostumerProtocol } from "../Costumer/costumerProtocol.interface";
+import { Vehicle } from "./vehicle.interface";
+import { Costumer } from "../Costumer/costumer.interface";
 
-export class EnterpriseCar implements VehicleProtocol {
-  constructor(
-    public name: string,
-    private readonly costumer: CostumerProtocol
-  ) {}
+export class EnterpriseCar implements Vehicle {
+  constructor(public name: string, private readonly costumer: Costumer) {}
 
   pickUp(): void {
-    console.log(`${this.name} está buscando ${this.costumer.name}`);
+    console.log(
+      `O ${this.name} (EMPRESARIAL) está buscando ${this.costumer.name}`
+    );
   }
 }
