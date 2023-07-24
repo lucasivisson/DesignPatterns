@@ -1,4 +1,4 @@
-import { Builder } from "./builder.interface";
+import { Builder } from "./Builder/builder.interface";
 
 export class Director {
   constructSportsCar(builder: Builder) {

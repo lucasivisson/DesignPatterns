@@ -1,5 +1,5 @@
+import { Builder } from "../builder.interface";
 import { Car } from "./Car";
-import { Builder } from "./builder.interface";
 
 export class CarBuilder implements Builder {
   private car: Car;

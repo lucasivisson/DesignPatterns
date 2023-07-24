@@ -1,7 +1,7 @@
+import { Builder } from "../builder.interface";
 import { Manual } from "./Manual";
-import { Builder } from "./builder.interface";
 
-export class CarManualBuilder implements Builder {
+export class ManualCarBuilder implements Builder {
   private manual: Manual;
 
   constructor() {

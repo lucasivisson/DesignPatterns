@@ -1,5 +1,5 @@
-import { CarBuilder } from "./CarBuilder";
-import { CarManualBuilder } from "./CarManualBuilder";
+import { CarBuilder } from "./Builder/Car/CarBuilder";
+import { ManualCarBuilder } from "./Builder/ManualCar/CarManualBuilder";
 import { Director } from "./Director";
 
 export class Application {
@@ -15,7 +15,7 @@ export class Application {
     car = builder.getProduct();
     console.log(car);
 
-    const manualBuilder = new CarManualBuilder();
+    const manualBuilder = new ManualCarBuilder();
     director.constructSportsCar(manualBuilder);
     const manual = manualBuilder.getProduct();
     console.log(manual);
