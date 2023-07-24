@@ -12,24 +12,26 @@ export class CarManualBuilder implements Builder {
     this.manual = new Manual();
   }
 
-  setSeats(): void {
-    // Documenta as funcionalidades do assento do carro.
+  setSeats(numberOfSeats: number): void {
+    console.log(`Seta ${numberOfSeats} como a quantidade de assentos no carro`);
   }
 
-  setEngine(): void {
-    // Adiciona instruções do motor.
+  setEngine(engine: string): void {
+    console.log(`Seta ${engine} como a engenharia do carro`);
   }
 
-  setTripComputer(): void {
-    // Adiciona instruções do computador de bordo.
+  setTripComputer(tripComputer: boolean): void {
+    console.log(
+      `Seta ${tripComputer} para as instruções do computador de bordo`
+    );
   }
 
-  setGPS(): void {
-    // Adiciona instruções do GPS.
+  setGPS(gps: boolean): void {
+    console.log(`Seta ${gps} no gps do carro`);
   }
 
   getProduct(): Manual {
-    // Retorna o manual e reseta o builder.
+    console.log("Retorna o manual e reseta o builder");
     const product = this.manual;
     this.reset();
     return product;

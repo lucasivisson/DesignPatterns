@@ -12,13 +12,21 @@ export class CarBuilder implements Builder {
     this.car = new Car();
   }
 
-  setSeats(): void {}
+  setSeats(numberOfSeats: number): void {
+    this.car.numberOfSeats = numberOfSeats;
+  }
 
-  setEngine(): void {}
+  setEngine(engine: string): void {
+    this.car.engine = engine;
+  }
 
-  setTripComputer(): void {}
+  setTripComputer(tripComputer: boolean): void {
+    this.car.tripComputer = tripComputer;
+  }
 
-  setGPS(): void {}
+  setGPS(gps: boolean): void {
+    this.car.gps = gps;
+  }
 
   getProduct(): Car {
     const product = this.car;

@@ -1,1 +1,6 @@
-export class Car {}
+export class Car {
+  numberOfSeats: number;
+  engine: string;
+  tripComputer: boolean;
+  gps: boolean;
+}
