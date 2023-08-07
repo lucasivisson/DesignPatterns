@@ -1,5 +1,5 @@
 export class Database {
-  private static instance: Database;
+  private static instance: Database | null = null;
   private db: string;
 
   private constructor(db: string) {
