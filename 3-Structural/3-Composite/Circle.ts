@@ -1,8 +1,8 @@
 import { Dot } from "./Dot";
 
 export class Circle extends Dot {
-  constructor(x: number, y: number, private radius: number) {
-    super(x, y);
+  constructor(id: number, x: number, y: number, private radius: number) {
+    super(id, x, y);
   }
 
   public draw(): void {

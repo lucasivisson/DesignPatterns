@@ -1,14 +1,16 @@
 import { Graphic } from "./graphic.interface";
 
 export class CompoundGraphic implements Graphic {
-  constructor(private children: Graphic[]) {}
+  public id: number;
+  private children: Graphic[];
 
   public add(child: Graphic) {
+    console.log("child", child);
     this.children.push(child);
   }
 
   public remove(child: Graphic) {
-    this.children.pop();
+    this.children.filter((childFilter) => childFilter.id !== child.id);
   }
 
   public move(x: number, y: number) {
@@ -16,5 +18,10 @@ export class CompoundGraphic implements Graphic {
       child.move(x, y);
     }
   }
-  draw: () => void;
+
+  public draw() {
+    for (let child of this.children) {
+      child.draw();
+    }
+  }
 }

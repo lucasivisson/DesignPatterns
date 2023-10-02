@@ -1,7 +1,7 @@
 import { Graphic } from "./graphic.interface";
 
 export class Dot implements Graphic {
-  constructor(protected x: number, protected y: number) {}
+  constructor(public id: number, protected x: number, protected y: number) {}
 
   public move(x: number, y: number) {
     this.x += x;
