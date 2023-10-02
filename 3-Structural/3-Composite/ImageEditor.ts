@@ -15,7 +15,6 @@ export class ImageEditor {
   public groupSelected(components: Graphic[]) {
     const group = new CompoundGraphic();
     for (let component of components) {
-      console.log("a", component);
       group.add(component);
       this.all.remove(component);
     }

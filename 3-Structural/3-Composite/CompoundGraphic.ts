@@ -2,10 +2,9 @@ import { Graphic } from "./graphic.interface";
 
 export class CompoundGraphic implements Graphic {
   public id: number;
-  private children: Graphic[];
+  private children: Graphic[] = [];
 
   public add(child: Graphic) {
-    console.log("child", child);
     this.children.push(child);
   }
 
